@@ -42,7 +42,7 @@
         
         frame = CGRectMake(((i+1) * distanceBetweenBars)- barWidth*0.5, self.frame.size.height-height, barWidth, height);
         bar = [[UIView alloc] initWithFrame:frame];
-        bar.backgroundColor = [UIColor blueColor];
+        bar.backgroundColor = [UIColor darkGrayColor];
         //bar.layer.cornerRadius = 5.0;
         [self addValueLabel:tempAlt.value.stringValue aboveFrame:bar.frame];
         [self addSubview:bar];
