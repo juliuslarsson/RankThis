@@ -8,13 +8,22 @@
 
 #import "Alternative.h"
 
-@interface Alternative()
 
-
-
-@end
 
 @implementation Alternative
+
+
+-(id)initWithName : (NSString*) name value : (NSNumber*) value question : (Question*) question{
+
+    self = [super init];
+    
+    if (self) {
+        _title = name;
+        _value = value;
+    }
+    
+    return  self;
+}
 
 
 

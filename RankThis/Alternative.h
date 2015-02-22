@@ -14,10 +14,11 @@
 @interface Alternative : NSObject
 
 
-@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSNumber *value;
-
 @property (strong, nonatomic) Question *question;
+
+-(id)initWithName : (NSString*) name value : (NSNumber*) value question : (Question*) question;
 
 
 @end
