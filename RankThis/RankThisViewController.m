@@ -20,10 +20,11 @@
 {
     [super viewDidLoad];
 	
-    NSArray *testArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:5],[NSNumber numberWithInt:5], nil ];
-    UIView *barContainer = [[BarContainer alloc]initWithFrame:CGRectMake(10, 10, 100, 100) values:testArray];
+    NSArray *testArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:5],[NSNumber numberWithInt:5],[NSNumber numberWithInt:5], nil ];
+    UIView *barContainer = [[BarContainer alloc]initWithFrame:CGRectMake(0, _gameView.frame.size.height * 0.2, _gameView.frame.size.width, 250)
+                                                       values:testArray];
     
-    [self.view addSubview:barContainer];
+    [_gameView addSubview:barContainer];
 }
 
 - (void)didReceiveMemoryWarning

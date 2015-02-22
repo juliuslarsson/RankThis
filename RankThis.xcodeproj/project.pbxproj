@@ -22,6 +22,9 @@
 		C8413A751A988DFB00D69CEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8413A731A988DFB00D69CEE /* InfoPlist.strings */; };
 		C8413A771A988DFB00D69CEE /* RankThisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8413A761A988DFB00D69CEE /* RankThisTests.m */; };
 		C8413A821A988EB900D69CEE /* BarContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8413A811A988EB900D69CEE /* BarContainer.m */; };
+		C84FF7701A99F6B200F7CE95 /* Alternative.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF76F1A99F6B200F7CE95 /* Alternative.m */; };
+		C84FF7731A99F72000F7CE95 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF7721A99F72000F7CE95 /* Question.m */; };
+		C84FF7761A99F7DE00F7CE95 /* QnA_Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,12 @@
 		C8413A761A988DFB00D69CEE /* RankThisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankThisTests.m; sourceTree = "<group>"; };
 		C8413A801A988EB900D69CEE /* BarContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarContainer.h; sourceTree = "<group>"; };
 		C8413A811A988EB900D69CEE /* BarContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarContainer.m; sourceTree = "<group>"; };
+		C84FF76E1A99F6B200F7CE95 /* Alternative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alternative.h; sourceTree = "<group>"; };
+		C84FF76F1A99F6B200F7CE95 /* Alternative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alternative.m; sourceTree = "<group>"; };
+		C84FF7711A99F72000F7CE95 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		C84FF7721A99F72000F7CE95 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		C84FF7741A99F7DE00F7CE95 /* QnA_Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QnA_Factory.h; sourceTree = "<group>"; };
+		C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QnA_Factory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,7 @@
 				C8413A5A1A988DFB00D69CEE /* RankThisAppDelegate.h */,
 				C8413A5B1A988DFB00D69CEE /* RankThisAppDelegate.m */,
 				C8413A5D1A988DFB00D69CEE /* Main.storyboard */,
+				C84FF76D1A99F61B00F7CE95 /* Models */,
 				C84FF76C1A99E73100F7CE95 /* ViewControllers */,
 				C8413A831A988EC000D69CEE /* Views */,
 				C8413A631A988DFB00D69CEE /* Images.xcassets */,
@@ -171,6 +181,19 @@
 				C8413A611A988DFB00D69CEE /* RankThisViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C84FF76D1A99F61B00F7CE95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C84FF7711A99F72000F7CE95 /* Question.h */,
+				C84FF7721A99F72000F7CE95 /* Question.m */,
+				C84FF76E1A99F6B200F7CE95 /* Alternative.h */,
+				C84FF76F1A99F6B200F7CE95 /* Alternative.m */,
+				C84FF7741A99F7DE00F7CE95 /* QnA_Factory.h */,
+				C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8413A5C1A988DFB00D69CEE /* RankThisAppDelegate.m in Sources */,
+				C84FF7701A99F6B200F7CE95 /* Alternative.m in Sources */,
 				C8413A821A988EB900D69CEE /* BarContainer.m in Sources */,
+				C84FF7731A99F72000F7CE95 /* Question.m in Sources */,
 				C8413A621A988DFB00D69CEE /* RankThisViewController.m in Sources */,
+				C84FF7761A99F7DE00F7CE95 /* QnA_Factory.m in Sources */,
 				C8413A581A988DFB00D69CEE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

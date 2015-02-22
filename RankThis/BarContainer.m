@@ -18,13 +18,12 @@
     UIView *bar;
     CGRect frame;
     
-    int barWidth = self.frame.size.width / 10;
-    int distanceBetweenBars = (self.frame.size.width - (barWidth * nrOfBars)) / nrOfBars+1;
-
+    double barWidth = self.frame.size.width / 10.0;
+    double distanceBetweenBars = self.frame.size.width / (nrOfBars+1.0);
+    
     for (int i = 0; i < nrOfBars; i++) {
         
-        
-        frame = CGRectMake((i+1) * distanceBetweenBars, self.frame.size.height-25, barWidth, 25);
+        frame = CGRectMake(((i+1) * distanceBetweenBars)- barWidth*0.5, self.frame.size.height-85, barWidth, 85);
         bar = [[UIView alloc] initWithFrame:frame];
         bar.backgroundColor = [UIColor redColor];
         [self addSubview:bar];
@@ -39,6 +38,7 @@
     if (self) {
         
         [self createBars:[valArray count]];
+        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
 }
@@ -47,7 +47,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        
+        
     }
     return self;
 }
