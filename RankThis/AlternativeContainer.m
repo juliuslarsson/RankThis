@@ -9,6 +9,7 @@
 #import "AlternativeContainer.h"
 #import "Alternative.h"
 #import "DragableView.h"
+#import "Color_Factory.h"
 
 @interface AlternativeContainer ()
 
@@ -27,12 +28,16 @@
     
     CGRect frame;
     
+    NSArray *colors = [Color_Factory getColors:[_alternatives count]];
+    
     for (int i = 0; i < [_alternatives count]; i++) {
         
         frame = CGRectMake(0, i*height, self.frame.size.width, height);
         
         tempAlt = [_alternatives objectAtIndex:i];
-        DragableView *dragView = [[DragableView alloc]initWithTitle:tempAlt.title frame:frame];
+        DragableView *dragView = [[DragableView alloc]initWithTitle:tempAlt.title
+                                                              color:[colors objectAtIndex:i]
+                                                              frame:frame];
         
         dragView.layer.borderColor = [UIColor blackColor].CGColor;
         dragView.layer.borderWidth = 1.0;

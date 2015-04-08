@@ -8,10 +8,12 @@
 
 #import "BarContainer.h"
 #import "Alternative.h"
+#import "BarView.h"
 
 @interface BarContainer ()
 
 @property (strong, nonatomic) NSArray *alternatives;
+@property (strong, nonatomic) NSMutableArray *bars;
 
 @end
 
@@ -27,7 +29,7 @@
         if(alt.value.intValue > largestValue)
             largestValue = alt.value.intValue;
     
-    UIView *bar;
+    BarView *bar;
     CGRect frame;
     Alternative *tempAlt;
     
@@ -41,16 +43,19 @@
         height = (tempAlt.value.doubleValue / largestValue) *0.75 * self.frame.size.height;
         
         frame = CGRectMake(((i+1) * distanceBetweenBars)- barWidth*0.5, self.frame.size.height-height, barWidth, height);
-        bar = [[UIView alloc] initWithFrame:frame];
+        bar = [[BarView alloc] initWithFrame:frame];
         bar.backgroundColor = [UIColor darkGrayColor];
         //bar.layer.cornerRadius = 5.0;
         [self addValueLabel:tempAlt.value.stringValue aboveFrame:bar.frame];
+        [self addDesctiptiveLabelForBar:bar];
+        [_bars addObject:bar];
         [self addSubview:bar];
     }
 
 }
 
 -(void)addValueLabel : (NSString*) labelString aboveFrame : (CGRect)frame{
+
 
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y - 30, frame.size.width, 25)];
     label.text = labelString;
@@ -59,6 +64,19 @@
     
     [self addSubview:label];
     
+}
+
+-(void)addDesctiptiveLabelForBar : (BarView*) bar {
+    
+    double width = self.frame.size.width / [_alternatives count];
+
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(bar.frame.origin.x, self.frame.size.height, width, 40)];
+    
+    //label.adjustsFontSizeToFitWidth = YES;
+    bar.label = label;
+    label.transform = CGAffineTransformMakeRotation(-0.3);
+    
+    [self addSubview:label];
 
 }
 
@@ -71,6 +89,7 @@
         _alternatives = valArray;
         [self createBars:[valArray count]];
         self.backgroundColor = [UIColor lightGrayColor];
+        _bars = [[NSMutableArray alloc]init];
     }
     return self;
 }

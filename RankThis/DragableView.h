@@ -10,6 +10,9 @@
 
 @interface DragableView : UIView
 
-- (id)initWithTitle: (NSString*)title frame : (CGRect)frame;
+@property CGRect originalFrame;
+
+- (id)initWithTitle: (NSString*)title color : (UIColor*)color frame : (CGRect)frame;
+@property (strong, nonatomic) UILabel *label;
 
 @end

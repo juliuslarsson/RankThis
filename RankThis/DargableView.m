@@ -7,11 +7,13 @@
 //
 
 #import "DragableView.h"
+#import "AppSettings.h"
+#import "Color_Factory.h"
 
 @interface DragableView ()
 
-@property CGRect originalFrame;
-@property (strong, nonatomic) UILabel *label;
+
+
 
 @end
 
@@ -32,7 +34,7 @@
     
                      }];
     
-    _label.hidden = YES;
+    _label.alpha = 0.0;
 
 }
 
@@ -45,12 +47,22 @@
 
 }
 
-- (id)initWithTitle: (NSString*)title frame : (CGRect)frame
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+
+    UITouch *touch = [touches anyObject];
+    NSNotification *panEnded = [NSNotification notificationWithName:PAN_ENDED
+                                                             object:self
+                                                           userInfo:@{TOUCH: touch}];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:panEnded];
+}
+
+- (id)initWithTitle: (NSString*)title color : (UIColor*)color frame : (CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.backgroundColor = [UIColor darkGrayColor];
+        self.backgroundColor = color;
         
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         label.text = title;

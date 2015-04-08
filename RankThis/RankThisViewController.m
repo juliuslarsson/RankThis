@@ -10,6 +10,9 @@
 #import "BarContainer.h"
 #import "QnA_Factory.h"
 #import "AlternativeContainer.h"
+#import "AppSettings.h"
+#import "DragableView.h"
+#import "BarView.h"
 
 @interface RankThisViewController ()
 
@@ -23,6 +26,38 @@
 
 @implementation RankThisViewController
 
+
+-(void)onPanEnded : (NSNotification *) notification{
+    
+    UITouch *touch = [notification.userInfo objectForKey:TOUCH];
+    CGPoint point = [touch locationInView:_barContainer];
+    
+    
+    DragableView *sender = notification.object;
+    
+    for (BarView *view in _barContainer.subviews){
+    
+        if (point.x > view.frame.origin.x && point.x < view.frame.origin.x + view.frame.size.width &&
+            point.y > view.frame.origin.y && point.y < view.frame.origin.y + view.frame.size.height) {
+            
+            sender.hidden = YES;
+            view.backgroundColor = sender.backgroundColor;
+            view.label.text = sender.label.text;
+            
+        }else{
+            
+            [UIView animateWithDuration:0.2
+                             animations:^{
+                                 sender.frame = sender.originalFrame;
+                             }
+                             completion:^(BOOL finished) {
+                                 sender.label.alpha = 1.0;
+                             }];
+        
+        
+        }
+    }
+}
 
 -(void)setUpLayout{
 
@@ -44,8 +79,6 @@
     _alternativeContainer = [[AlternativeContainer alloc]initWithAlternatives:_alternatives frame:containerFrame];
     [_gameView addSubview:_alternativeContainer];
     
-
-
 }
 
 - (void)viewDidLoad
@@ -53,9 +86,14 @@
     [super viewDidLoad];
 	
     _question = [QnA_Factory getQuestion];
-    _alternatives = [QnA_Factory getAlternativesforQuestion:_question nrOfAlternatives:[NSNumber numberWithInt:3]];
+    _alternatives = [QnA_Factory getAlternativesforQuestion:_question nrOfAlternatives:[NSNumber numberWithInt:4]];
     
     [self setUpLayout];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(onPanEnded:)
+                                                name:PAN_ENDED
+                                              object:nil];
 
 }
 

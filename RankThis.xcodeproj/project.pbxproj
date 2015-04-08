@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8205B9E1A9A5A2B00F98E95 /* DragableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8205B9D1A9A5A2B00F98E95 /* DragableView.m */; };
+		C8205B9E1A9A5A2B00F98E95 /* DargableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8205B9D1A9A5A2B00F98E95 /* DargableView.m */; };
 		C8413A4C1A988DFB00D69CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8413A4B1A988DFB00D69CEE /* Foundation.framework */; };
 		C8413A4E1A988DFB00D69CEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8413A4D1A988DFB00D69CEE /* CoreGraphics.framework */; };
 		C8413A501A988DFB00D69CEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8413A4F1A988DFB00D69CEE /* UIKit.framework */; };
@@ -26,7 +26,9 @@
 		C84FF7701A99F6B200F7CE95 /* Alternative.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF76F1A99F6B200F7CE95 /* Alternative.m */; };
 		C84FF7731A99F72000F7CE95 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF7721A99F72000F7CE95 /* Question.m */; };
 		C84FF7761A99F7DE00F7CE95 /* QnA_Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */; };
+		C8C598021AD522A30066E240 /* Color_Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C598011AD522A30066E240 /* Color_Factory.m */; };
 		C8EB817E1A9A34D80060F0F2 /* AlternativeContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EB817D1A9A34D80060F0F2 /* AlternativeContainer.m */; };
+		C8ECCE1B1AA0CC460026B525 /* BarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8ECCE1A1AA0CC460026B525 /* BarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		C8205B9C1A9A5A2B00F98E95 /* DragableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragableView.h; sourceTree = "<group>"; };
-		C8205B9D1A9A5A2B00F98E95 /* DragableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragableView.m; sourceTree = "<group>"; };
+		C8205B9D1A9A5A2B00F98E95 /* DargableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DargableView.m; sourceTree = "<group>"; };
 		C8413A481A988DFB00D69CEE /* RankThis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankThis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8413A4B1A988DFB00D69CEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8413A4D1A988DFB00D69CEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,8 +71,13 @@
 		C84FF7721A99F72000F7CE95 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		C84FF7741A99F7DE00F7CE95 /* QnA_Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QnA_Factory.h; sourceTree = "<group>"; };
 		C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QnA_Factory.m; sourceTree = "<group>"; };
+		C8C598001AD522A30066E240 /* Color_Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color_Factory.h; sourceTree = "<group>"; };
+		C8C598011AD522A30066E240 /* Color_Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color_Factory.m; sourceTree = "<group>"; };
+		C8D184471A9B1D7100C3CF5E /* AppSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		C8EB817C1A9A34D80060F0F2 /* AlternativeContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeContainer.h; sourceTree = "<group>"; };
 		C8EB817D1A9A34D80060F0F2 /* AlternativeContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeContainer.m; sourceTree = "<group>"; };
+		C8ECCE191AA0CC460026B525 /* BarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarView.h; sourceTree = "<group>"; };
+		C8ECCE1A1AA0CC460026B525 /* BarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +145,7 @@
 				C8413A831A988EC000D69CEE /* Views */,
 				C8413A631A988DFB00D69CEE /* Images.xcassets */,
 				C8413A521A988DFB00D69CEE /* Supporting Files */,
+				C8D184471A9B1D7100C3CF5E /* AppSettings.h */,
 			);
 			path = RankThis;
 			sourceTree = "<group>";
@@ -175,9 +183,11 @@
 			isa = PBXGroup;
 			children = (
 				C8205B9C1A9A5A2B00F98E95 /* DragableView.h */,
-				C8205B9D1A9A5A2B00F98E95 /* DragableView.m */,
+				C8205B9D1A9A5A2B00F98E95 /* DargableView.m */,
 				C8413A801A988EB900D69CEE /* BarContainer.h */,
 				C8413A811A988EB900D69CEE /* BarContainer.m */,
+				C8ECCE191AA0CC460026B525 /* BarView.h */,
+				C8ECCE1A1AA0CC460026B525 /* BarView.m */,
 				C8EB817C1A9A34D80060F0F2 /* AlternativeContainer.h */,
 				C8EB817D1A9A34D80060F0F2 /* AlternativeContainer.m */,
 			);
@@ -201,6 +211,8 @@
 				C84FF76E1A99F6B200F7CE95 /* Alternative.h */,
 				C84FF76F1A99F6B200F7CE95 /* Alternative.m */,
 				C84FF7741A99F7DE00F7CE95 /* QnA_Factory.h */,
+				C8C598001AD522A30066E240 /* Color_Factory.h */,
+				C8C598011AD522A30066E240 /* Color_Factory.m */,
 				C84FF7751A99F7DE00F7CE95 /* QnA_Factory.m */,
 			);
 			name = Models;
@@ -304,14 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8205B9E1A9A5A2B00F98E95 /* DragableView.m in Sources */,
+				C8205B9E1A9A5A2B00F98E95 /* DargableView.m in Sources */,
 				C8413A5C1A988DFB00D69CEE /* RankThisAppDelegate.m in Sources */,
 				C84FF7701A99F6B200F7CE95 /* Alternative.m in Sources */,
 				C8413A821A988EB900D69CEE /* BarContainer.m in Sources */,
+				C8ECCE1B1AA0CC460026B525 /* BarView.m in Sources */,
 				C8EB817E1A9A34D80060F0F2 /* AlternativeContainer.m in Sources */,
 				C84FF7731A99F72000F7CE95 /* Question.m in Sources */,
 				C8413A621A988DFB00D69CEE /* RankThisViewController.m in Sources */,
 				C84FF7761A99F7DE00F7CE95 /* QnA_Factory.m in Sources */,
+				C8C598021AD522A30066E240 /* Color_Factory.m in Sources */,
 				C8413A581A988DFB00D69CEE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
