@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *gameView;
 @property (strong, nonatomic) NSArray *alternatives; //Of Alternative type
 @property (strong, nonatomic) Question *question;
-@property (strong, nonatomic) UIView *barContainer;
+@property (strong, nonatomic) BarContainer *barContainer;
 @property (strong, nonatomic) UIView *alternativeContainer;
 
 @end
@@ -35,7 +35,7 @@
     
     DragableView *sender = notification.object;
     
-    for (BarView *view in _barContainer.subviews){
+    for (BarView *view in [_barContainer getBars]){
     
         if (point.x > view.frame.origin.x && point.x < view.frame.origin.x + view.frame.size.width &&
             point.y > view.frame.origin.y && point.y < view.frame.origin.y + view.frame.size.height) {

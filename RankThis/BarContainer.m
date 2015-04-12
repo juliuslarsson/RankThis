@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSArray *alternatives;
 @property (strong, nonatomic) NSMutableArray *bars;
 
+
 @end
 
 @implementation BarContainer
@@ -23,6 +24,7 @@
 -(void)createBars : (uint) nrOfBars {
     
     int largestValue = 0;
+    _bars = [[NSMutableArray alloc]init];
     
     //Find  the largest value
     for (Alternative *alt in _alternatives)
@@ -54,6 +56,17 @@
 
 }
 
+-(NSArray*)getBars{
+
+    NSMutableArray *bars = [[NSMutableArray alloc]init];
+    
+    for (UIView *view in self.subviews)
+        if([view isKindOfClass:[BarView class]])
+           [bars addObject:view];
+    
+    return bars;
+}
+
 -(void)addValueLabel : (NSString*) labelString aboveFrame : (CGRect)frame{
 
 
@@ -63,8 +76,8 @@
     label.adjustsFontSizeToFitWidth = YES;
     
     [self addSubview:label];
-    
 }
+
 
 -(void)addDesctiptiveLabelForBar : (BarView*) bar {
     

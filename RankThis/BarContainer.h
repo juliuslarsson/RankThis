@@ -12,4 +12,8 @@
 
 - (id)initWithFrame:(CGRect)frame values : (NSArray*) valArray;
 
+
+-(NSArray*)getBars;
+
+
 @end

@@ -12,7 +12,7 @@
 
 @interface DragableView ()
 
-
+@property (strong, nonatomic) NSMutableArray *bars;
 
 
 @end
