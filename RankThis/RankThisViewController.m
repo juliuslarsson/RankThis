@@ -43,6 +43,8 @@
             sender.hidden = YES;
             view.backgroundColor = sender.backgroundColor;
             view.label.text = sender.label.text;
+            [view animateResizing];
+            
             
         }else{
             

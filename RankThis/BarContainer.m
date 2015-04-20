@@ -42,12 +42,12 @@
     for (int i = 0; i < nrOfBars; i++) {
         
         tempAlt = [_alternatives objectAtIndex:i];
-        height = (tempAlt.value.doubleValue / largestValue) *0.75 * self.frame.size.height;
+        height = (tempAlt.value.doubleValue / largestValue) *0.75 * self.frame.size.height + 5.0; //+5 to hide bottom corner
         
-        frame = CGRectMake(((i+1) * distanceBetweenBars)- barWidth*0.5, self.frame.size.height-height, barWidth, height);
+        frame = CGRectMake(((i+1) * distanceBetweenBars)- barWidth*0.5, self.frame.size.height-height+5, barWidth, height);
         bar = [[BarView alloc] initWithFrame:frame];
         bar.backgroundColor = [UIColor darkGrayColor];
-        //bar.layer.cornerRadius = 5.0;
+        bar.layer.cornerRadius = 5.0;
         [self addValueLabel:tempAlt.value.stringValue aboveFrame:bar.frame];
         [self addDesctiptiveLabelForBar:bar];
         [_bars addObject:bar];
@@ -98,6 +98,7 @@
     
     self = [self initWithFrame:frame];
     if (self) {
+        self.clipsToBounds = YES;
         
         _alternatives = valArray;
         [self createBars:[valArray count]];

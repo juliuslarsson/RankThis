@@ -10,6 +10,7 @@
 
 @interface BarView : UIView
 
+-(void)animateResizing;
 @property (strong, nonatomic) UILabel *label;
 
 @end
